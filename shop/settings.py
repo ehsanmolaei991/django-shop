@@ -24,11 +24,9 @@ SECRET_KEY = 'django-insecure-z^w@2(pq^dr@u5sn7__voz#r$jq1p#_p)ulejw5zb4ycl4udz%
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+IS_DEV = True
 
 ALLOWED_HOSTS = []
-
-
-# Application definition
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -106,18 +104,15 @@ AUTH_PASSWORD_VALIDATORS = [
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
 
 LANGUAGE_CODE = 'en-us'
-
-TIME_ZONE = 'UTC'
-
+TIME_ZONE = 'Asia/Tehran'
 USE_I18N = True
-
 USE_TZ = True
 
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
-
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 
 # Media Files
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')

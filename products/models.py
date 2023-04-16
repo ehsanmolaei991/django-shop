@@ -16,6 +16,9 @@ class Category(models.Model):
         verbose_name = _("Category")
         verbose_name_plural = _("Categories")
 
+    def __str__(self):
+        return self.title
+
 
 class Product(models.Model):
     title = models.CharField(_("title"), max_length=50)
@@ -31,6 +34,9 @@ class Product(models.Model):
         verbose_name = _("Product")
         verbose_name_plural = _("Products")
 
+    def __str__(self):
+        return self.title
+
 
 class File(models.Model):
     product = models.ForeignKey(Product, verbose_name=_("product"), on_delete=models.CASCADE)
@@ -44,3 +50,6 @@ class File(models.Model):
         db_table = "files"
         verbose_name = _("File")
         verbose_name_plural = _("Files")
+
+    def __str__(self):
+        return self.title
